@@ -24,7 +24,7 @@ class HenselLifting:
     def addZeroOrTwoLiftedSolutions(self, x):
         if self.polynomial.evaluate(x) % (2 * self.currentDivisor) == 0:
             self.currentSolutions.add(x)
-            self.currentSolutions.add(x + 2 ** self.currentDivisor)
+            self.currentSolutions.add(x + 2 ** (self.currentDivisor - 1))
 
     def setInitialSolutions(self):
         for i in [0, 1]:
