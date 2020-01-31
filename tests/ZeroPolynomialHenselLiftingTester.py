@@ -19,3 +19,10 @@ class FirstExerciseHenselLiftingTest(TestCase):
 
         self.assertEqual(4, self.lifting.currentDivisor)
         self.assertSetEqual({0, 1, 2, 3}, self.lifting.currentSolutions)
+
+    def test_twoLifts(self):
+        self.lifting.lift()
+        self.lifting.lift()
+
+        self.assertEqual(8, self.lifting.currentDivisor)
+        self.assertSetEqual(set(range(8)), self.lifting.currentSolutions)
