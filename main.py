@@ -6,7 +6,7 @@ elements = util.readLineOfInts()
 k = elements[0]
 coefficients = reversed(elements[1:])
 lifting = HenselLifting(Polynomial(list(coefficients)))
-for i in range(k):
+for i in range(k - 1):
     lifting.lift()
 if len(lifting.currentSolutions) == 0:
     print("UNSAT")
